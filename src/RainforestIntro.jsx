@@ -1,0 +1,16 @@
+import React,{useEffect,useRef,useState} from 'react';
+import {Link} from 'react-router-dom';
+import './intro.css';
+export default function RainforestIntro(){
+ const video=useRef(null),section=useRef(null),interrupted=useRef(false);const [menu,setMenu]=useState(false),[blocked,setBlocked]=useState(false);
+ const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const enter=()=>{setMenu(false); const target=document.getElementById('research-hero');if(!target)return; const y=target.getBoundingClientRect().top+scrollY-76;if(window.researchLenis)window.researchLenis.scrollTo(y,{duration:1.6});else window.scrollTo({top:y,behavior:reduced()?'instant':'smooth'});};
+ useEffect(()=>{history.scrollRestoration='manual';window.scrollTo(0,0);const update=()=>document.body.classList.toggle('rainforest-watching',section.current?.getBoundingClientRect().bottom>100);update();window.addEventListener('scroll',update,{passive:true});const el=video.current;if(!reduced())el.play().catch(()=>setBlocked(true));const stop=()=>{interrupted.current=true};const key=e=>{if(e.key==='Escape')setMenu(false);if(['PageDown','ArrowDown','End',' '].includes(e.key))stop()};window.addEventListener('wheel',stop,{passive:true});window.addEventListener('touchstart',stop,{passive:true});window.addEventListener('keydown',key);return()=>{document.body.classList.remove('rainforest-watching');window.removeEventListener('scroll',update);window.removeEventListener('wheel',stop);window.removeEventListener('touchstart',stop);window.removeEventListener('keydown',key)}},[]);
+ useEffect(()=>{if(!menu)return;const previous=document.body.style.overflow;document.body.style.overflow='hidden';window.researchLenis?.stop();return()=>{document.body.style.overflow=previous;window.researchLenis?.start()}},[menu]);
+ return <section ref={section} className="rainforest-intro" aria-label="Research Repro introduction">
+ <video ref={video} src="/assets/rainforest-intro.mp4" muted playsInline preload="auto" onError={()=>setBlocked(true)} onEnded={()=>{if(!interrupted.current&&!menu&&!reduced()&&scrollY<section.current.offsetHeight*.4)enter()}} aria-label="Sunlit rainforest and flowing stream"/>
+ <div className="intro-nav"><Link to="/" aria-label="Research Repro home"><img src="/assets/continuity/logo-horizontal-white.svg" alt="Research Repro"/></Link><button aria-expanded={menu} aria-controls="intro-menu" onClick={()=>setMenu(!menu)}>{menu?'Close':'Navigate'} <span aria-hidden="true">{menu?'×':'☰'}</span></button></div>
+ {menu&&<nav id="intro-menu" className="intro-menu" aria-label="Introduction navigation"><button onClick={enter}>Explore</button>{[['/platform','Platform'],['/products','Products'],['/pilot','Scope a pilot']].map(([url,label])=><Link key={url} to={url} onClick={()=>setMenu(false)}>{label}</Link>)}</nav>}
+ <div className="intro-copy"><h1>Every discovery<br/>deserves a closer look.</h1><p>Trace the evidence behind computational research.</p><button onClick={()=>{interrupted.current=true;enter()}}>Explore the evidence <span aria-hidden="true">↘</span></button>{blocked&&<button className="intro-play" onClick={()=>video.current.play().then(()=>setBlocked(false)).catch(()=>enter())}>Play introduction</button>}</div>
+ </section>
+}
