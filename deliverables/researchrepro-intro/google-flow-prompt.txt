@@ -1,0 +1,13 @@
+Create an exactly 8-second, 16:9 cinematic website intro using the supplied images as the visual sequence: 01-opening at 0 seconds, 02-evidence-emerges around 4 seconds, and 03-full-reveal as the final composition. One continuous, elegant shot with no cuts. Preserve the three glass panels, their proportions, positions, scientific patterns, and deep forest-green, mint, pearl, and bronze palette.
+
+0–1.5 seconds: begin with the dark opening reference. A single mint junction glows softly. A narrow light sweep travels over the beveled glass edges. Subtle emerald haze drifts behind the panels; reflections move naturally across the organic floor.
+
+1.5–4 seconds: mint points gradually illuminate inside the first pane, revealing its scatter pattern and smooth curve. A controlled pulse travels along the existing connector into the central pane. Its branching provenance paths draw outward from the root, with small glass nodes lighting in sequence. Match the midpoint reference.
+
+4–6.5 seconds: the central tree finishes illuminating. A restrained bronze light reveals the third pane and its two fine curved traces. The small amber endpoint glows gently; keep the short connection visibly interrupted. Do not turn it into a successful or completed connection.
+
+6.5–8 seconds: lighting settles into the final reference. Hold a clear, calm final composition for the last second. Keep the left third quiet and dark for typography to be added later.
+
+Use a virtually locked cinematic camera with a very subtle 2% forward drift that settles by the final hold. Motion should come mainly from traveling light, sequential illumination, delicate haze, glass refraction, and soft floor caustics. Luxury product-film quality, physically plausible smoked glass, precise edges, restrained bloom and smooth easing. Preserve geometry and temporal consistency; no wobbling, melting, panel duplication or morphing.
+
+Absolutely no text, letters, numbers, labels, logos, captions, watermarks, interface chrome, grid floors, stripes, checks, people, sudden flashes, fast spins, explosions or excessive particles. No dialogue, voiceover, music or sound effects. Silent visual only.

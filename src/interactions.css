@@ -1,0 +1,45 @@
+/* Restrained response: surfaces stay straight; only action icons travel. */
+:root{--interaction-fast:160ms;--interaction-ease:cubic-bezier(.2,0,0,1);--hover-edge:#6c927b}
+a,button,summary,input,select,textarea{transition:background-color var(--interaction-fast) var(--interaction-ease),border-color var(--interaction-fast) var(--interaction-ease),color var(--interaction-fast) var(--interaction-ease),box-shadow 220ms var(--interaction-ease)}
+.button svg,.nav-cta svg,.text-link svg,.module-number>svg,.resource-card .text-link svg,.mega a>svg:last-child{transition:transform 180ms var(--interaction-ease)}
+.module-card,.resource-card,.node,.queue-stats button{transition:background-color 180ms var(--interaction-ease),border-color 180ms var(--interaction-ease),box-shadow 220ms var(--interaction-ease)}
+.header nav>a:not(.nav-cta),.nav-link,.footer-top a:not(.brand),.module-index a,.sources a{position:relative;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:6px;text-decoration-thickness:1px;transition:color 160ms,text-decoration-color 160ms}
+input:focus-visible,textarea:focus-visible,select:focus-visible{border-color:var(--mint);box-shadow:0 0 0 3px #b5d6c21a;outline:2px solid var(--mint);outline-offset:3px}
+.light :is(input,textarea,select):focus-visible{outline-color:#387c65;border-color:#387c65}
+:where(a,button,summary):focus-visible{outline:2px solid #d7aa60;outline-offset:4px}
+.button:not(:disabled):focus-visible{box-shadow:0 0 0 5px #b5d6c21a}
+.module-card:focus-visible,.resource-card:focus-visible{border-color:#587e65;box-shadow:inset 0 3px #587e65,0 8px 22px #18392312}
+.node:focus-visible{border-color:var(--mint);background:#b5d6c212}
+.queue-table tr:focus-within{background:#b5d6c212;box-shadow:inset 3px 0 var(--mint)}
+summary:focus-visible{background:#b5d6c210}
+.light summary:focus-visible{background:#2452340a}
+@media(hover:hover) and (pointer:fine){
+ .button:not(:disabled):hover{background:#d1e8d9;border-color:#d1e8d9;box-shadow:0 4px 18px #b5d6c220}
+ .button.secondary:not(:disabled):hover{background:#b5d6c217;border-color:var(--mint);color:#edf2ec}
+ .light .button:not(.secondary):not(:disabled):hover{background:#305c40;border-color:#305c40;color:#fff}
+ .light .button.secondary:not(:disabled):hover{background:#dce7dc;border-color:#4d7158;color:#16251d}
+ .button:not(:disabled):hover svg,.text-link:hover svg,.nav-cta:hover svg,.module-card:hover .module-number>svg,.resource-card:hover .text-link svg,.mega a:hover>svg:last-child{transform:translateX(4px)}
+ .header nav>a:not(.nav-cta):hover,.nav-link:hover,.footer-top a:not(.brand):hover,.module-index a:hover,.sources a:hover{text-decoration-color:currentColor}
+ .header .nav-cta:hover{background:#b5d6c215;border-color:var(--mint);box-shadow:inset 0 0 0 1px #b5d6c225}
+ .module-card:hover,.resource-card:hover{border-color:#587e65;box-shadow:inset 0 3px #587e65,0 8px 22px #18392312}
+ .module-card:hover{background:#e6ede3}
+ .resource-card:hover .resource-graphic{background:#dce7dc}
+ .resource-graphic{transition:background-color 180ms}
+ .node:hover{background:#b5d6c212;border-color:#789e85;box-shadow:inset 0 2px #789e85}
+ .node.selected:hover{border-color:var(--mint);background:#b5d6c21c}
+ .light .node:hover{background:#dce7dc;border-color:#587e65}
+ .role-tabs button:not([aria-selected=true]):hover,.queue-stats button:not(.selected):hover{background:#b5d6c212;border-color:#789e85}
+ .gallery-buttons button:hover,.menu-toggle:hover,footer button:hover{background:#b5d6c218;border-color:#8db69b}
+ .gallery-buttons button:hover{background:#dae5d8;border-color:#4f755a}
+ summary:hover{background:#b5d6c210}
+ .light summary:hover{background:#2452340a}
+ .text-link:hover{color:#d3e8d9;text-decoration:underline;text-underline-offset:5px}
+ .light .text-link:hover,.light .sources a:hover{color:#275a3a}
+ .queue-table tbody tr:hover{background:#b5d6c20e;box-shadow:inset 3px 0 #87b79b}
+ input:not(:disabled):hover,select:not(:disabled):hover,textarea:not(:disabled):hover{border-color:#789e85}
+}
+.button:not(:disabled):active,.gallery-buttons button:active,.menu-toggle:active{box-shadow:inset 0 2px 7px #07180e30}
+button:disabled{cursor:not-allowed;box-shadow:none!important}
+button:disabled svg{transform:none!important}
+@media(prefers-reduced-motion:reduce){a,button,summary,input,select,textarea,.module-card,.resource-card,.node,.resource-graphic,.button svg,.text-link svg,.nav-cta svg,.module-number>svg{transition:none!important}.button svg,.text-link svg,.nav-cta svg,.module-number>svg,.mega a>svg:last-child{transform:none!important}}
+.motion-disabled *{transition:none!important}.motion-disabled :is(.button,.text-link,.module-number)>svg{transform:none!important}

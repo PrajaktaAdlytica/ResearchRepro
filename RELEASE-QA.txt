@@ -1,0 +1,5 @@
+2026-10-28 quick release QA
+Build passes; 4 existing tests pass. Non-blocking JS bundle size warning (~865KB uncompressed).
+Browser checked home, products, pilot and demo queue at 390, 768 and 1440px. No broken rendered images detected. Corrected tablet horizontal overflow from reveal transforms and normalized pilot/contact trailing-slash detection. Rechecked tablet width 768/768 and /pilot/ title.
+This is a concept preview; authentication and intake are not connected to a backend. No production sandbox. No actual intro video rendered.
+Apache .htaccess supplied for Hostinger SPA route refreshes; live Hostinger deployment and Apache behavior not verified until account setup.

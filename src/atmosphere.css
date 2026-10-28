@@ -1,0 +1,50 @@
+/* Material atmosphere: organic light and paper, never repeating geometric patterns. */
+body{background:#101713 url('/assets/atmosphere-dark.png') center top/cover fixed}
+.hero,.dark,.small-hero,.demo-page,.auth{background-image:linear-gradient(#10171366,#10171366),url('/assets/atmosphere-dark.png');background-size:cover;background-position:center}
+.map-section,.security-section{background-position:right center}
+.work-section,.roles{background-position:left bottom}
+.light{background-image:linear-gradient(#eef1ec55,#eef1ec55),url('/assets/atmosphere-light.png');background-size:cover;background-position:center}
+.comparison,.evaluation{background-position:left top}
+.modules-section,.faq{background-position:right bottom}
+.cta-section{background:#183326 url('/assets/atmosphere-dark.png') center/cover}
+footer{background-image:linear-gradient(#0b120d99,#0b120d99),url('/assets/atmosphere-dark.png');background-size:cover}
+.panel{box-shadow:0 12px 32px #07170d0a}
+/* Shutters are paint layers only: card geometry stays straight and stable. */
+.button,.header .nav-cta,.module-card,.resource-card,.node,.queue-stats button{position:relative;isolation:isolate;overflow:hidden;--shutter:#d7edbc}
+.button::before,.header .nav-cta::before,.module-card::before,.resource-card::before,.node::before,.queue-stats button::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--shutter);transform:translateX(-102%);transition:transform 460ms cubic-bezier(.22,1,.36,1)}
+.button.secondary{--shutter:#294b38}.light .button{--shutter:#214f37}.light .button.secondary{--shutter:#c5ddbb}
+.intake-form .button{--shutter:#396d4c}.button.amber-button{--shutter:#edce8c}
+.header .nav-cta{--shutter:#31533f}
+.module-card,.resource-card{--shutter:#c7dfc6}
+.module-card:nth-child(even),.resource-card:nth-child(even){--shutter:#e4d3b4}
+.module-card:nth-child(even)::before,.resource-card:nth-child(even)::before{transform:translateY(102%)}
+.node,.queue-stats button{--shutter:#254f3c}.light .node{--shutter:#c5ddbb}
+.module-card{background:#f5f7efd9}.resource-card{padding:24px;border:1px solid #b4c6b5;background:#f5f7efa6}
+.resource-card .resource-graphic{background:#dbe6d694}
+.button-label{display:inline-grid;perspective:500px;line-height:1.4;text-align:left}
+.button-label>span{grid-area:1/1;backface-visibility:hidden;transition:transform 360ms cubic-bezier(.22,1,.36,1),opacity 200ms;transform-origin:50% 50%}
+.label-back{transform:translateY(70%) rotateX(-85deg);opacity:0}
+/* Keyboard focus receives the same paint state; no content is hover-only. */
+.button:not(:disabled):focus-visible::before,.nav-cta:focus-visible::before,.module-card:focus-visible::before,.resource-card:focus-visible::before,.node:focus-visible::before{transform:translate(0)}
+@media(hover:hover) and (pointer:fine){
+ .button:not(:disabled):hover::before,.header .nav-cta:hover::before,.module-card:hover::before,.resource-card:hover::before,.node:hover::before,.queue-stats button:hover::before{transform:translate(0)}
+ .button:not(:disabled):hover .label-front{transform:translateY(-70%) rotateX(85deg);opacity:0}
+ .button:not(:disabled):hover .label-back{transform:translateY(0) rotateX(0);opacity:1}
+ .button:not(:disabled):hover{box-shadow:0 8px 24px #79b58f30}
+ .module-card:hover,.resource-card:hover{box-shadow:inset 0 3px #50775a,0 14px 36px #193f2820;border-color:#729676}
+ .module-card:hover .module-symbol,.resource-card:hover .resource-graphic>svg{color:#265e40;filter:drop-shadow(0 3px 8px #347b4820)}
+ .node:hover{box-shadow:inset 0 2px #a4caa5,0 7px 22px #081e1430}
+}
+.module-symbol,.resource-graphic>svg{transition:color 300ms,filter 300ms}
+@media(hover:none){body{background-attachment:scroll}}
+@media(prefers-reduced-motion:reduce){.button::before,.nav-cta::before,.module-card::before,.resource-card::before,.node::before,.queue-stats button::before,.button-label>span{transition:none!important}.button:hover .label-front{transform:none!important;opacity:1!important}.button:hover .label-back{opacity:0!important;transform:none!important}}
+.motion-disabled *::before,.motion-disabled *::after{transition:none!important}.motion-disabled .button:hover .label-front{transform:none!important;opacity:1!important}.motion-disabled .button:hover .label-back{opacity:0!important}
+.hero .hero-art{mix-blend-mode:lighten}
+.dark:not(.hero),.demo-page,.auth{background-image:linear-gradient(#10171399,#10171399),url('/assets/atmosphere-dark.png')}
+.hero{background-image:linear-gradient(#10171380,#10171380),url('/assets/atmosphere-dark.png')}
+
+/* Allow tablet grid children to shrink within their tracks. */
+.comparison-bottom > *, .security-grid > * { min-width: 0; }
+.gate-list strong, .next-action { overflow-wrap: anywhere; }
+
+main { overflow-x: clip; }

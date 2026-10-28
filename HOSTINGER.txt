@@ -1,0 +1,13 @@
+HOSTINGER DEPLOYMENT
+Source branch: main. Ready-to-serve branch: hostinger.
+Create a Custom PHP/HTML website in hPanel and assign researchrepro.com.
+Open its Dashboard > Advanced > Git; connect GitHub and select PrajaktaAdlytica/ResearchRepro.
+Choose branch hostinger and destination public_html. Deploy.
+Do not deploy main into public_html: it contains development sources.
+The hostinger branch already contains compiled index.html, assets and .htaccess for React deep links. No npm, Node server, PHP code or database is required on Hostinger.
+An active web hosting plan with an available website allowance is needed; domain registration alone is insufficient. This uses a PHP/HTML website allowance, not a Node Web App slot.
+If Git is unavailable, extract researchrepro-hostinger-upload.zip directly into public_html, including hidden .htaccess. Back up any existing website first.
+Follow hPanel's domain connection instructions for the exact DNS records; preserve mail records. Enable SSL and test HTTPS, /products and /pilot/ by directly loading and refreshing them.
+Forms and sign-in remain frontend demonstrations; no requests are sent. Rainforest images are video reference deliverables, not an installed intro video.
+For updates, rebuild main with npm ci && npm run build, then publish dist/client contents to hostinger. Auto-deploy watches hostinger, not main.
+Reference: https://www.hostinger.com/support/1583302-how-to-deploy-a-git-repository-in-hostinger/

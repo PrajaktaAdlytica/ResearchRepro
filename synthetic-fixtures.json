@@ -1,0 +1,197 @@
+{
+  "disclosure": "DEMO — SYNTHETIC DATA. No research code executed.",
+  "records": [
+    {
+      "id": "RA-001",
+      "title": "Civic participation",
+      "artifact": "Complete",
+      "state": "Audit complete",
+      "owner": "Mira Vale",
+      "next": "Archive completeness report",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-002",
+      "title": "Survey response timing",
+      "artifact": "Access unresolved",
+      "state": "Pending",
+      "owner": "Elias North",
+      "next": "Confirm access scope",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-003",
+      "title": "Online discussion patterns",
+      "artifact": "Restricted data",
+      "state": "Rejected",
+      "owner": "Nora Finch",
+      "next": "Record scope exclusion",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-004",
+      "title": "Neighborhood mobility",
+      "artifact": "Data unavailable",
+      "state": "Blocked",
+      "owner": "Mira Vale",
+      "next": "Request accessible artifact",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-005",
+      "title": "Public meeting attendance",
+      "artifact": "Complete",
+      "state": "Audit complete",
+      "owner": "Elias North",
+      "next": "Prepare reviewer handoff",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-006",
+      "title": "Information diffusion",
+      "artifact": "Simulated execution error",
+      "state": "Pending",
+      "owner": "Nora Finch",
+      "next": "Inspect fictional package error",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-007",
+      "title": "Local policy sentiment",
+      "artifact": "Simulated output mismatch",
+      "state": "Pending",
+      "owner": "Mira Vale",
+      "next": "Review illustrative tolerance",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-008",
+      "title": "Community survey weighting",
+      "artifact": "Complete",
+      "state": "Audit complete",
+      "owner": "Elias North",
+      "next": "Export completeness report",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-009",
+      "title": "Participation and commute time",
+      "artifact": "License unresolved",
+      "state": "Blocked",
+      "owner": "Mira Vale",
+      "next": "Review draft author query",
+      "date": "29 Oct 2026"
+    },
+    {
+      "id": "RA-010",
+      "title": "Public consultation themes",
+      "artifact": "Conflicting version",
+      "state": "Rejected",
+      "owner": "Nora Finch",
+      "next": "Resolve unsupported version inference",
+      "date": "30 Oct 2026"
+    }
+  ],
+  "artifactManifest": [
+    [
+      "README.md",
+      "Project overview",
+      "4 KB",
+      "Available"
+    ],
+    [
+      "analysis.py",
+      "Figure 2 source",
+      "2 KB",
+      "Available"
+    ],
+    [
+      "data.csv",
+      "Dataset reference",
+      "—",
+      "License unresolved"
+    ],
+    [
+      "requirements.txt",
+      "Dependency list",
+      "1 KB",
+      "Available"
+    ],
+    [
+      "environment.lock",
+      "Pinned environment",
+      "—",
+      "Missing"
+    ],
+    [
+      "figure-2.csv",
+      "Regenerated output",
+      "—",
+      "Not executed"
+    ]
+  ],
+  "failureTaxonomy": [
+    [
+      "Unavailable",
+      "An artifact cannot be accessed within the authorized scope. This is an availability finding, not a computational error."
+    ],
+    [
+      "Not executed",
+      "No run has occurred. Permissions, environment details or the agreed scope may prevent execution."
+    ],
+    [
+      "Execution error",
+      "An authorized run started but failed. A real finding requires a run ID, environment and logs. Demo examples are simulated."
+    ],
+    [
+      "Output mismatch",
+      "A completed comparison differs under a declared tolerance. It needs human interpretation and does not establish misconduct."
+    ]
+  ],
+  "fictionalFigure": [
+    {
+      "x": 10,
+      "y": 67
+    },
+    {
+      "x": 15,
+      "y": 64
+    },
+    {
+      "x": 20,
+      "y": 66
+    },
+    {
+      "x": 25,
+      "y": 59
+    },
+    {
+      "x": 30,
+      "y": 61
+    },
+    {
+      "x": 35,
+      "y": 55
+    },
+    {
+      "x": 40,
+      "y": 54
+    },
+    {
+      "x": 45,
+      "y": 49
+    },
+    {
+      "x": 50,
+      "y": 52
+    },
+    {
+      "x": 55,
+      "y": 46
+    },
+    {
+      "x": 60,
+      "y": 43
+    }
+  ]
+}
